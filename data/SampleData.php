@@ -36,30 +36,34 @@ if (isset($_GET['d']) && $_GET['d'] == 'transaction') {
 
   $columns = [
     [
-      'db' => 'no_invoice_mtc',
+      'db' => 'id_mtc',
       'dt' => 0
     ],
     [
-      'db' => 'date_payment_mtc',
+      'db' => 'no_invoice_mtc',
       'dt' => 1
     ],
     [
-      'db' => 'name_mcc',
+      'db' => 'date_payment_mtc',
       'dt' => 2
     ],
     [
-      'db' => 'no_client_mcc',
+      'db' => 'name_mcc',
       'dt' => 3
     ],
     [
-      'db' => 'name_client_mcc',
+      'db' => 'no_client_mcc',
       'dt' => 4
     ],
     [
+      'db' => 'name_client_mcc',
+      'dt' => 5
+    ],
+    [
       'db' => 'id_mtc',
-      'dt' => 5,
+      'dt' => 6,
       'formatter' => function ($d, $row) {
-        return "<button class='btn btn-primary' onclick='onView({$d})'>Test</button>";
+        return "<button class='btn btn-outline-primary btn-sm' onclick='onView({$d})'>view</button>";
       }
     ]
   ];
